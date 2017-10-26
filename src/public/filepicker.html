@@ -1,0 +1,63 @@
+		<div class="panel-form-item"> 
+		           <div class="panel-form-title">Caption:</div>
+              		<div class="panel-form-input"><input type="text" ng-model="item.data.caption"></input></div>											
+		</div>
+		
+		<div class="panel-form-item"> 
+		           <div class="panel-form-title">File:</div>
+              		<div class="panel-form-input"><input id="zipload" data-preview-image="data.file" type="file"></input></div>											
+		</div>
+		
+		
+	  <div class="panel-form-item"  ng-show="item.data.source.source == 'self'"> 
+		           <div class="panel-form-title">Source:</div>
+              		<div class="panel-form-input">
+              		       <select ng-model="item.data.source.source">
+                             <option value="self">Self Published</option>
+                             <option value="">Other</option>                        
+                        </select>
+              		</div>											
+		</div>
+		
+		<div ng-show="item.data.source.source !== 'self'">
+		
+		   		<div class="panel-form-item"> 
+		           <div class="panel-form-title">Copyright:</div>
+              		<div class="panel-form-input"><input type="text" ng-model="item.data.source.copyright"></input></div>											
+		         </div>
+		         
+		         
+		         	  
+				  <div class="panel-form-item" ng-show = "item.data.source.license == 'cc'"> 
+					           <div class="panel-form-title">License:</div>
+			              		<div class="panel-form-input">
+			                        <select ng-model="item.data.source.license">
+			                             <option value="cc">Creative Commons</option>
+			                             <option value="">Other</option>
+			                             
+			                        </select>		
+			              		</div>											
+				  </div>
+				  
+						  	  
+			  <div class="panel-form-item" ng-show="item.data.source.license !== 'cc'"> 
+				           <div class="panel-form-title">License:</div>
+		              		<div class="panel-form-input"><input type="text" ng-model="item.data.source.license"></input></div>											
+			  </div>
+			  
+			  
+			  <div class="panel-form-item"> 
+		           <div class="panel-form-title">Source:</div>
+              		<div class="panel-form-input"><input type="text" ng-model="item.data.source.source"></input></div>											
+		     </div>
+		
+		
+		
+		</div>
+		
+
+
+
+		
+
+		

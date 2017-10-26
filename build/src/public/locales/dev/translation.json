@@ -1,0 +1,53 @@
+{
+    "input": {
+        "audio": "Audio File",
+        "image": "Image File",
+        "pdf": "PDF File",
+        "video": "Video File"
+    },
+    "file": "File",
+    "source": "Source",
+    "selfPublished": "Self Published",
+    "other": "Other",
+    "copyright": "Copyright",
+    "license": "License",
+    "creativeCommons": "Creative Commons",
+    "caption": "Caption",
+    "optionalInfo": "Optional Info",
+    "imageWhile": "Image while playing",
+    "subtitle": "Subtitle",
+    "description": "Description",
+    "extraFields": "Extra Fields",
+    "pageNumber": "Page Number",
+    "downloading": "Downloading...",
+    "youtube": "Youtube Link",
+    "chooseQuality": "Choose Video Quality",
+    "videoPreview": "Video Preview",
+    "problem": {
+        "vidInfo": "There was a problem obtaining the video info",
+        "file": "Invalid File Type. Please try using a valid __type__ file",
+        "link": "Link Invalid"
+    },
+    "question": "Question",
+    "prompt": "Prompt",
+    "explanation": "Explanation",
+    "image": "Image",
+    "hint": "Hint",
+    "hintImage": "Hint Image",
+    "answers": "Answer(s)",
+    "answer": "Answer",
+    "delete": "Delete",
+    "option": "Option",
+    "mainQuestion": "Main Question",
+    "downloadProgress": "Download Progress",
+    "presentation": {
+        "name": "presentation",
+        "converting": "Converting Presentation",
+        "upload": "Upload presentation"
+    },
+    "slideNumber": "Slide Number",
+    "unrecorded": "Unrecorded",
+    "recorded": "Recorded",
+    "startingIn": "Starting in....",
+    "recording": "Recording..."
+}

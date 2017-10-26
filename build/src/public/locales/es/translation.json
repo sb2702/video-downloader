@@ -1,0 +1,53 @@
+{
+    "input": {
+        "audio": "Archivo de audio",
+        "image": "Archivo de imagen",
+        "pdf": "Archivo PDF",
+        "video": "Archivo de video"
+    },
+    "file": "Archivo",
+    "source": "Fuente",
+    "selfPublished": "Original",
+    "other": "Otra",
+    "copyright": "Derecho de autor",
+    "license": "Licencia",
+    "creativeCommons": "Creative Commons",
+    "caption": "Subtítulo",
+    "optionalInfo": "Informacion opcional",
+    "imageWhile": "Insertar imagen durante la reproducción",
+    "subtitle": "Subtítulo",
+    "description": "Resumen",
+    "extraFields": "Campos extras",
+    "pageNumber": "Número de página",
+    "downloading": "Descargando...",
+    "youtube": "Link de Youtube",
+    "chooseQuality": "Eligir calidad de video",
+    "videoPreview": "Vista previa del video",
+    "problem": {
+        "vidInfo": "Error al obtener los datos del video",
+        "file": "Archivo inválido. Favor de elegir un archivo de tipo __type__ ",
+        "link": "Liga inválida"
+    },
+    "question": "Pregunta",
+    "prompt": "Pregunta",
+    "explanation": "Explicación",
+    "image": "Imagen",
+    "hint": "Pista",
+    "hintImage": "Imagen de Pista",
+    "answers": "Respuesta(s)",
+    "answer": "Respuesta",
+    "delete": "Borrar",
+    "option": "Opción",
+    "mainQuestion": "Pregunta principal",
+    "downloadProgress": "Progreso de descarga",
+    "presentation": {
+        "name": "Presentación",
+        "converting": "Convertir presentación",
+        "upload": "Subir presentación"
+    },
+    "slideNumber": "Número de diapositiva",
+    "unrecorded": "Audio no grabado",
+    "recorded": "Grabado",
+    "startingIn": "Empezando en...",
+    "recording": "Grabando en..."
+}

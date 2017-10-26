@@ -1,0 +1,401 @@
+
+body{
+
+font-family: OpenSans;
+
+    overflow: hidden;
+
+}
+
+.button{
+
+}
+
+.quiz-field{
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    left: 0;
+    right: 0;
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: rgb(250,250, 250);
+    border-bottom-color: #EEE;
+    overflow: hidden;
+}
+
+.quiz-slider{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 300px;
+
+    float: right;
+}
+
+.quiz-num {
+
+    float: left;
+    color: #444;
+    padding: 5px 10px;
+    margin: 0px 5px;
+    background-color: #CCC;
+    cursor: pointer;
+}
+
+.quiz-num:hover {
+
+    color: #0084d1;
+}
+
+
+.quiz-option-selected{
+    background-color: #444;
+    color: #CCC;
+}
+.quiz-category{
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    margin: -5px;
+    left: 0;
+    right: 0;
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: rgb(230,230, 230);
+    font-weight: bold;
+    border-bottom-color: #EEE;
+    overflow: hidden;
+
+}
+
+#container{
+    margin: -8px -8px;
+}
+
+.panel-form-item{
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    left: 0;
+    right: 0;
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: rgb(250,250, 250);
+    border-bottom-color: #EEE;
+    overflow: hidden;
+}
+
+.panel-form-title{
+    position: relative;
+    top: 2px;
+    left:  8px;
+    float: left;
+    font-size: 16px;
+    color: #444;
+}
+
+.panel-form-input{
+    margin-right: 5px;
+    float: right;
+}
+
+
+
+.panel-left{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 60%;
+
+}
+
+.panel-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+    box-shadow: 0px 2px 3px #888888;
+}
+
+.panel-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    font-family: OpenSans;
+    font-size: 12px;
+}
+
+
+#input-box{
+
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    margin-left: 10%;
+
+}
+
+#zipload{
+
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    filter: alpha(opacity=0);
+    opacity: 0;
+
+
+}
+
+.input-image{
+    position: relative;
+    width: 15%;
+    top: 7%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+input.youtube{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 400px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+}
+
+input.youtube-init{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 400px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    color: #aaa;
+}
+
+
+#or{
+
+    width: 100%;
+    margin: 5px;
+    color: #aaa;
+    font-size: 20px;
+    text-align: center;
+    font-family: OpenSansSemi;
+}
+
+#youtube-text{
+
+    width: 100%;
+    margin: 5px;
+    color: #A03333;
+    font-size:16px;
+    text-align: center;
+    font-family: OpenSansSemi;
+}
+
+img.loading{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+
+img.youtube{
+
+    width: 350px;
+    display: block;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+
+}
+#youtube-title{
+
+    width: 100%;
+    margin: 10px;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+    font-family: OpenSansBold;
+}
+
+.size-button{
+
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 2px;
+    display: block;
+
+    font-family: OpenSansSemi;
+    background-color: #0084df;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+
+.progress-bar-container{
+    position: absolute;
+    top: 40%;
+    width: 80%;
+    margin-left: 10%;
+
+    text-align: center;
+    margin-right: 5%;
+    font-size: 16px;
+    color: #666;
+}
+
+
+#youtube-author{
+
+    width: 350px;
+    display: block;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    text-align: center;
+
+    color: #333;
+    font-size:16px;
+
+    font-family: OpenSans;
+}
+
+
+#file-upload-button{
+
+    position: relative;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+   margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+
+    display: block;
+
+    font-family: OpenSansSemi;
+    background-color: #0084df;
+    color: #ffffff;
+    cursor: pointer;
+
+
+}
+
+.panel-form-category{
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    left: 0;
+    right: 0;
+    color: #DDD;
+font-family: OpenSansBold;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: #444;
+    border-bottom-color: #EEE;
+    overflow: hidden;
+}
+
+
+@font-face{
+    font-family: OpenSans;
+    src: url('font/OpenSans-Regular.ttf');
+}
+
+@font-face{
+    font-family: OpenSansSemi;
+    src: url('font/OpenSans-Semibold.ttf');
+}
+
+@font-face{
+    font-family: OpenSansBold;
+    src: url('font/OpenSans-Bold.ttf');
+}
+
+
+video{
+    position:relative;
+    width:  420px;
+    height: 315px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+#video-container{
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    position: relative;
+}
+
+
+#caption{
+    position: absolute;
+    text-align: center;
+    font-family: OpenSansBold;
+    font-size: 20px;
+    left: 0;
+    width: 100%;
+    top: 5px;
+    color: #666;
+}
+
+input.caption{
+    position: absolute;
+    font-family: OpenSansBold;
+    font-size: 20px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    top: 2px;
+    color: #666;
+
+    border-style: dashed;
+}
+
+.video-js.vjs-default-skin{
+    position: absolute;
+    width:  420px;
+    height: 315px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    top: 50px;
+}

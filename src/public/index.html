@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pookie Descargas</title>
+
+    <link rel="icon" href="pusheen.png">
+    <script type="application/javascript" src="lib/angular.min.js"></script>
+    <script type="application/javascript" src="lib/video.js"></script>
+    <script type="application/javascript" src="lib/FileSaver.min.js"></script>
+    <script type="application/javascript" src="lib/il8n.js"></script>
+  <script type="application/javascript" src="main.js"></script>
+    <script type="application/javascript" src="util.js"></script>
+    <script type="application/javascript" src="lib/bootstrap/ui-bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"><link>
+    <link rel="stylesheet" href="main.css"><link>
+
+
+    <link rel="stylesheet" href="lib/video-js.css">
+</head>
+<body ng-controller="mainController">
+
+
+
+<div class="panel-container"  ng-show="screen=='downloading'">
+
+
+    <img src="loading.gif" class="input-image">
+
+    <div class="progress-bar-container">
+        <div>Descargando: {{downloadCompleted}}%</div>
+        <progressbar animate="true" value="downloadCompleted" type="success"></progressbar>
+    </div>
+
+</div>
+
+
+<div class="panel-container"  ng-show="screen=='init'">
+
+
+
+    <img src="pusheen.png" class="input-image">
+    <div id="input-box">
+        <div id="youtube-input"><input type="text"  class="youtube"    placeholder="Liga de youtube"  ng-mouseenter="editLink()"  ng-class="{'youtube-init': linkInit}"   ng-model="videoURL" /> </div>
+        <div id='youtube-text' ng-show="linkInvalid">{{t("problem.link")}}</div>
+    </div>
+
+</div>
+
+
+<div class="panel-container"  ng-show="screen=='videoInfo'">
+
+    <img src="lib/loading.gif"  class="loading"  ng-hide="videoInfoLoaded">
+
+
+    <div class="panel-left" ng-show="videoInfoLoaded">
+
+        <div class="panel-form-category">Elige tamaño del video</div>
+
+        <div class="panel-form-item" ng-repeat="stream in vidInfo.streams" ng-show="acceptedType(stream)">
+
+     <div class="panel-form-title"><div class="size-button" ng-click="getVideoFile(stream)">{{stream.quality}}</div> </div>
+   <!--  <div class="panel-form-title"><a ng-href="{{stream.url}}" download="video.mp4" target="_blank"><div class="size-button">{{stream.quality}}</div> </a></div>-->
+            <div class="panel-form-input">{{stream.size}}</div>
+
+
+        </div>
+
+
+    </div>
+    <div class="panel-right" ng-show="videoInfoLoaded">
+        <div class="panel-form-category">{{t("videoPreview")}}</div>
+
+        <div id="youtube-title">{{vidInfo.title}}</div>
+        <img class="youtube"  ng-src="{{vidInfo.image}}"   />
+        <div id="youtube-author">By: {{vidInfo.author}}</div>
+
+    </div>
+
+
+
+</div>
+
+<div class="panel-container"  ng-show="screen=='videoDownload'">
+
+
+    <img src="pandi.png" class="input-image">
+
+    <a ng-href="{{videoLoadedURL}}" download="video.mp4" ><div c style="position: absolute; color: #444444; left: 50%; top: 50%; font-size: 8vh;  -webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Listo!</div></a>
+
+
+</div>
+
+
+
+
+
+
+<div ng-show="screen=='FileLoaded'">
+<div class="panel-left" >
+
+
+
+    <div class="panel-form-category">Hey</div>
+    <div class="panel-form-item"  ng-show="item.data.source.source == 'self'">
+        <div class="panel-form-title">Elige un tamaño</div>
+        <div class="panel-form-input">
+            <select ng-model="item.data.source.source">
+                <option value="self">{{t("selfPublished")}}</option>
+                <option value="">{{t("other")}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div ng-show="item.data.source.source !== 'self'">
+
+        <div class="panel-form-item">
+            <div class="panel-form-title">{{t("copyright")}}:</div>
+            <div class="panel-form-input"><input type="text" ng-model="item.data.source.copyright"/></div>
+        </div>
+
+
+
+        <div class="panel-form-item" ng-show = "item.data.source.license == 'cc'">
+            <div class="panel-form-title">{{t("license")}}:</div>
+            <div class="panel-form-input">
+                <select ng-model="item.data.source.license">
+                    <option value="cc">{{t("creativeCommons")}}</option>
+                    <option value="">{{t("other")}}</option>
+
+                </select>
+            </div>
+        </div>
+
+
+        <div class="panel-form-item" ng-show="item.data.source.license !== 'cc'">
+            <div class="panel-form-title">{{t("license")}}:</div>
+            <div class="panel-form-input"><input type="text" ng-model="item.data.source.license" /></div>
+        </div>
+
+
+        <div class="panel-form-item">
+            <div class="panel-form-title">{{t("source")}}:</div>
+            <div class="panel-form-input"><input type="text" ng-model="item.data.source.source" /></div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div ng-show="item.data.location">
+        <div class="panel-form-category">{{t("optionalInfo")}}</div>
+        <div class="panel-form-item">
+            <div class="panel-form-title">{{t("caption")}}:</div>
+            <div class="panel-form-input"><input type="text" ng-model="item.data.caption" /></div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+    <div class="panel-right"  ng-init="editCaption = false" ng-show="(screen=='FileLoaded')">
+
+
+        <div  ng-mouseenter="editCaption = true; "  ng-mouseleave="editCaption = false">
+            <div   ng-hide="editCaption"  id="caption">{{item.data.caption}}</div>
+            <input class="caption" ng-show="editCaption" type="text" ng-model="item.data.caption"   />
+        </div>
+
+
+
+        <div id="video-container">
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
