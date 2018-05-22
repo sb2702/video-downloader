@@ -28,7 +28,7 @@
     <img src="loading.gif" class="input-image">
 
     <div class="progress-bar-container">
-        <div>Descargando: {{downloadCompleted}}%</div>
+        <div>Downloading: {{downloadCompleted}}%</div>
         <progressbar animate="true" value="downloadCompleted" type="success"></progressbar>
     </div>
 
@@ -41,7 +41,7 @@
 
     <img src="pusheen.png" class="input-image">
     <div id="input-box">
-        <div id="youtube-input"><input type="text"  class="youtube"    placeholder="Liga de youtube"  ng-mouseenter="editLink()"  ng-class="{'youtube-init': linkInit}"   ng-model="videoURL" /> </div>
+        <div id="youtube-input"><input type="text"  class="youtube"    placeholder="Youtube Link"  ng-mouseenter="editLink()"  ng-class="{'youtube-init': linkInit}"   ng-model="videoURL" /> </div>
         <div id='youtube-text' ng-show="linkInvalid">{{t("problem.link")}}</div>
     </div>
 
