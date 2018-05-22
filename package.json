@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/sb2702/servidor-descargas/issues"
   },
-  "homepage": "https://github.com/sb2702/servidor-descargas#readme"
+  "homepage": "https://github.com/sb2702/servidor-descargas#readme",
+  "devDependencies": {
+    "async": "^2.6.1",
+    "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-open": "^0.2.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
 }

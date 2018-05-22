@@ -1,18 +1,32 @@
 {
-  "name": "pookie-descargas",
-  "version": "1.0.0",
-  "description": "Descargas para pookie",
-  "main": "server.js",
+  "name": "video-downloader",
+  "version": "0.1.0",
+  "description": "Docker/NodeJS repo for hosting your own video download website",
+  "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sb2702/servidor-descargas.git"
   },
   "author": "Sam Bhattacharyya",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sb2702/servidor-descargas/issues"
+  },
+  "homepage": "https://github.com/sb2702/servidor-descargas#readme",
+  "devDependencies": {
+    "async": "^2.6.1",
+    "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-open": "^0.2.3"
+  },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "express-static": "^1.0.3",
-    "request": "^2.75.0"
+    "express": "^4.16.3",
+    "request": "^2.87.0"
   }
 }
