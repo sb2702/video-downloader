@@ -13,9 +13,9 @@
   "author": "Sam Bhattacharyya",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sb2702/servidor-descargas/issues"
+    "url": "https://github.com/sb2702/video-downloader/issues"
   },
-  "homepage": "https://github.com/sb2702/servidor-descargas#readme",
+  "homepage": "https://github.com/sb2702/video-downloader#readme",
   "devDependencies": {
     "async": "^2.6.1",
     "grunt": "^1.0.2",

@@ -2,7 +2,7 @@
 <html ng-app="app">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Pookie Descargas</title>
+    <title>Video downloader</title>
 
     <link rel="icon" href="pusheen.png">
     <script type="application/javascript" src="lib/angular.min.js"></script>
@@ -55,7 +55,7 @@
 
     <div class="panel-left" ng-show="videoInfoLoaded">
 
-        <div class="panel-form-category">Elige tamaño del video</div>
+        <div class="panel-form-category">Choose a file size</div>
 
         <div class="panel-form-item" ng-repeat="stream in vidInfo.streams" ng-show="acceptedType(stream)">
 
@@ -86,7 +86,7 @@
 
     <img src="pandi.png" class="input-image">
 
-    <a ng-href="{{videoLoadedURL}}" download="video.mp4" ><div c style="position: absolute; color: #444444; left: 50%; top: 50%; font-size: 8vh;  -webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Listo!</div></a>
+    <a ng-href="{{videoLoadedURL}}" download="video.mp4" ><div c style="position: absolute; color: #444444; left: 50%; top: 50%; font-size: 8vh;  -webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Ready!</div></a>
 
 
 </div>
@@ -103,7 +103,7 @@
 
     <div class="panel-form-category">Hey</div>
     <div class="panel-form-item"  ng-show="item.data.source.source == 'self'">
-        <div class="panel-form-title">Elige un tamaño</div>
+        <div class="panel-form-title">Choose a filesize</div>
         <div class="panel-form-input">
             <select ng-model="item.data.source.source">
                 <option value="self">{{t("selfPublished")}}</option>

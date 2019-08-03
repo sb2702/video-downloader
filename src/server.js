@@ -2,14 +2,15 @@
  * Created by sam on 16-10-20.
  */
 
-var express = require('express');
-var path =require('path');
-var app = express();
-var http = require('http');
+const express = require('express');
 
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
-var request  = require('request');
+const app = express();
+
+const https = require('https');
+
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+const request  = require('request');
 
 
 app.use(express.static(__dirname + '/public'));
@@ -41,32 +42,26 @@ app.post('/getVidInfo', jsonParser, function (req, res) {
 
     var process = function (data) {
 
-
-
-
         var info = {};
         parse_str(data, info);
 
 
-        if(info['status']== 'fail'){
+        if(info['status']=== 'fail'){
             return res.status(400).send("Bad Video ID");
         }
 
 
-
-
-
         var streams = info['url_encoded_fmt_stream_map'].split(",");
+
 
         var results = [];
         for (var i = 0; i < streams.length; i++) {
             var real_stream = {};
+
             parse_str(streams[i], real_stream);
-            real_stream['url'] += '&signature=' + real_stream['sig'];
+
             results.push(real_stream);
-        };
-
-
+        }
 
 
 
@@ -85,7 +80,7 @@ app.post('/getVidInfo', jsonParser, function (req, res) {
 
     };
 
-    var req2 = http.get(options, callback).end();
+    var req2 = https.get(options, callback).end();
 
 });
 
@@ -129,9 +124,9 @@ app.post('/getVidSize', jsonParser, required(['url']),  function (req, res) {
 });
 
 function parse_str(str, array) {
+
     //       discuss at: http://phpjs.org/functions/parse_str/
     //      original by: Cagri Ekin
-
 
     var strArr = String(str)
             .replace(/^&/, '')
@@ -217,7 +212,7 @@ function parse_str(str, array) {
             lastObj[key] = value;
         }
     }
-};
+}
 
 
 
@@ -238,7 +233,7 @@ function  required (fields) {
 
                 var key = keys[j];
 
-                if(typeof  ob[key] == 'undefined') {
+                if(typeof  ob[key] === 'undefined') {
                     return res.status(400).send('Bad Request - missing fields');
 
                 }
@@ -246,11 +241,11 @@ function  required (fields) {
                     ob = ob[key];
                 }
             }
-        };
+        }
         next();
 
     };
-};
+}
 
 
 
